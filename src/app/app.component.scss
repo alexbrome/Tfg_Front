@@ -1,0 +1,38 @@
+
+.customer-navbar{
+    background-color: #003973;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px;
+}
+
+.logo{
+    height: 60px;
+    width: 130px;
+    margin-bottom: 2px;
+    
+}
+
+.navbar-title{
+    >a{
+        color:white !important;
+        margin-left: 10px;
+        font-size:18px;
+        font-weight: bolder;
+        
+    }
+}
+
+.nav-links{
+    display:flex;
+    align-items: center;
+    margin-left: auto;
+    a{
+        color: white;
+        margin-left: 15px;
+    }
+
+
+
+}

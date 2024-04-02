@@ -1,0 +1,28 @@
+<div style="background-color: #F8F8F8; min-height: 91vh;">
+
+    <div style="padding-top: 10px;" ></div>
+    <h1 style="text-align: center;margin-top: 20px;margin-bottom: 40px;text-decoration: underline;"><b>Lista de bicicletas disponibles</b></h1>
+       <div style="margin-top: 10px;" class="child" *ngFor="let bike of bikes">
+         <div nz-row>
+            <div nz-col nzSpan="8">
+               <img [src]="bike.processedImg" alt="bike" class="profile" style="height: 130px;width: 240px;border-radius: 10px;">
+            </div>
+         </div>
+         <div nz-col nzSpan="16">
+                <h2 style="cursor: pointer;color: #108ee9;">
+                {{bike.brand}} - {{ bike.name }} - {{ bike.type }}</h2>
+                
+
+                <hr>
+                <h5>Precio : <b>${{ bike.precio }}</b> - Transmision :
+                    <b>{{ bike.transmision }}</b>
+                </h5>
+                <hr>
+                <div style="float: right;">
+                    <button style="margin-left: 10px;" nzSize="small" nz-button nzType="primary" routerLink="/admin/bike/{{ bike.id }}">Editar</button>  
+                <button style="margin-left: 10px;" nzSize="small" nz-button nzType="primary" nzDanger (click)="deleteBike(bike.id)">Borrar</button>            
+            </div>
+         </div><br>
+       </div>
+   
+</div>

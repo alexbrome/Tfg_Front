@@ -1,0 +1,62 @@
+
+<div style="background-color: #F8F8F8; min-height: 91vh;" *ngIf="bike">
+
+    <div style="padding-top: 10px;" ></div>
+    
+       <div style="margin-top: 10px;" class="child" >
+         <div nz-row>
+            <div nz-col nzSpan="8">
+               <img [src]="processedImage" alt="bike" class="profile" style="height: 130px;width: 200px;border-radius: 10px;">
+            </div>
+         </div>
+         <div nz-col nzSpan="16">
+                <h2 style="cursor: pointer;color: #108ee9;">
+                {{bike.brand}} - {{ bike.name }} - {{ bike.type }}</h2>
+                
+  
+                <hr>
+                <h5>Precio : <b>${{ bike.precio }}</b> - Transmision :
+                    <b>{{ bike.transmision }}</b>
+                </h5>
+                <hr>           
+         </div>
+       </div> 
+       
+ <div style="display: flex; justify-content: center; align-items: center;background-color: #dbe3ea;margin-left: 380px;margin-right: 450px; " >
+  <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="Cargando.." style="margin-top: 50px;">
+     <div class="dashboard-filter">
+        <form [formGroup]="validateForm">
+             <div class="filter-grid" >
+                <div class="filter-select-dropdown filter-fields-width" >
+
+                    <nz-form-item style="margin-left: 100px;">
+                     <nz-form-label  [nzSpan]="0" nzFor="From Date">Fecha Inicio</nz-form-label>
+                    <nz-form-control [nzSpan]="0">
+                        <nz-date-picker formControlName="fromDate" style="width: 75%;"
+                        nzPlaceHolder="Desde...." name="From Date" [nzFormat]="dateFormat" id="From Date">
+                    </nz-date-picker>
+                    </nz-form-control>                 
+                </nz-form-item>
+
+                <nz-form-item style="margin-left: 100px;">
+                    <nz-form-label  nzFor="To Date" [nzSpan]="0">Fecha Fin</nz-form-label>
+                   <nz-form-control [nzSpan]="0">
+                       <nz-date-picker formControlName="toDate" style="width: 75%;"
+                       nzPlaceHolder="Hasta...." name="To Date"  [nzFormat]="dateFormat" id="To Date">
+                   </nz-date-picker>
+                   </nz-form-control>                 
+               </nz-form-item>
+
+                </div>
+
+                <div class="filter-select-dropdown filter-fields-width" >
+                    <button class="filterBtn" style="margin-left: 100px; background-color: black; color: white;margin-bottom: 40px;" nz-button
+                    (click)="bookBike(validateForm.value)">
+                    <b>Reservar Bike</b> </button>
+                </div>
+             </div>
+        </form>
+     </div>
+  </nz-spin>
+  </div>
+</div>

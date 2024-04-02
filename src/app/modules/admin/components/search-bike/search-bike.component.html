@@ -1,0 +1,64 @@
+<div class="parent" >
+    <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="Cargando">
+      <div class="dashboard-ilter">
+        <div class="filter-grid" [formGroup]="searchBikeForm">
+            <div class="filter-select-dropdown filter-fieldswidth">
+
+                <nz-form-item>
+                    <nz-form-label nzFor="gender">Marca</nz-form-label>
+                    <nz-form-control nzErrorTip="Campo requerido">
+                      <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Selecciona marca" formControlName="brand">
+                        <nz-option *ngFor="let brand of listOfBrands" [nzLabel]="brand" [nzValue]="brand"></nz-option>
+                      </nz-select>
+                    </nz-form-control>
+                  </nz-form-item>
+                  
+                  <nz-form-item>
+                    <nz-form-label nzFor="studentClass">Tipo</nz-form-label>
+                    <nz-form-control nzErrorTip="Campo requerido">
+                      <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Selecciona Tipo" formControlName="type">
+                        <nz-option *ngFor="let type of listOfType" [nzLabel]="type" [nzValue]="type"></nz-option>
+                      </nz-select>
+                    </nz-form-control>
+                  </nz-form-item>
+                  
+                  <nz-form-item>
+                    <nz-form-label nzFor="gender">Transmision</nz-form-label>
+                    <nz-form-control nzErrorTip="Campo requerido">
+                      <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Selecciona Transmision" formControlName="transmision">
+                        <nz-option *ngFor="let transmision of listOftransmission" [nzLabel]="transmision" [nzValue]="transmision"></nz-option>
+                      </nz-select>
+                    </nz-form-control>
+                  </nz-form-item>
+
+            </div>
+
+            <div class="filter-select-dropdown filter-fields-wdth">
+                <button class="filterBtn" nz-button nzType="primary" (click)="searchBike()">Buscar Bike
+
+                </button>
+            </div>
+        </div>
+      </div>
+    </nz-spin>
+</div>
+<hr>
+
+<!-------------------Lista de busqueda-------------->
+<div style="background-color:#F8F8F8;">
+ <div class="child" style="padding-bottom:30px;" *ngFor="let bike of bikes">
+  <div nzRow>
+    <div nz-col nzSpan="8">
+        <img [src]="bike.proccesedImg" alt="bike_profile_pic" style="height:130px;width:220px;border-radius:10px;" 
+        class="profile">
+    </div>
+    <div nz-col nzSpan="16">
+      <h2 style="cursor:pointer;color: #101010;">
+    {{ bike.brand }} ---{{ bike.name }}</h2>
+    <p>{{ bike.transmision }}</p>
+    <hr>
+    <h5>Precio : <b>{{bike.precio}}</b>-- <b>{{bike.type}}</b></h5>
+    </div>
+  </div>
+ </div>
+</div>

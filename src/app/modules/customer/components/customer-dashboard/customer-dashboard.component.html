@@ -1,0 +1,28 @@
+<div style="background-color: #F8F8F8; min-height: 91vh;">
+  <h1 style="text-align: center;margin-top: 20px;margin-bottom: 40px;text-decoration: underline;"><b>Lista de bicicletas disponibles</b></h1>
+  <div style="padding-top: 10px;" ></div>
+ 
+     <div style="margin-top: 10px;display: flex;flex-wrap: wrap;justify-content: center;" class="child" *ngFor="let bike of bikes"  style="border: 1px solid #30353a;margin-bottom: 20px;">
+       <div nz-row>
+          <div nz-col nzSpan="8">
+             <img [src]="bike.proccesedImg" alt="bike" class="profile" style="height: 130px;width: 200px;border-radius: 10px;">
+          </div>
+       </div><br>
+       <div nz-col nzSpan="16">
+              <h2 style="cursor: pointer;color: #108ee9;"><b> {{bike.brand}} - {{ bike.name }} - {{ bike.type }}</b>
+             </h2>            
+              <hr>
+              <h5>Precio : <b>${{ bike.precio }}</b> - Transmision :
+                  <b>{{ bike.transmision }}</b>
+              </h5>
+              <hr>
+           <div style="float: right;">
+            <button style="margin-left: 10px; border-radius: 5px; background-color: rgb(40, 40, 157) ; border: none; 
+            color: white;padding: 11px;justify-content: center;text-align: center;"  nz-button nzType="default" routerLink="/customer/book/{{ bike.id }}">Reservar</button>
+           </div>
+       </div><br>
+     </div>
+    
+
+</div>
+
