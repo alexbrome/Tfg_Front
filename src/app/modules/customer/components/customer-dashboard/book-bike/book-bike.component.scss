@@ -61,3 +61,30 @@ h2:hover{
     padding-bottom: 20px;
     margin-top: 20px;
 }
+
+b{
+    font-size:20px;
+}
+
+.row{
+    display:flex;
+}
+
+.column{
+    flex:1;
+}
+
+.box {
+    background-color: lightgray;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+  }
+
+.paypalCard{
+    background-color: #dbe3ea;
+    height: 400px;
+    width: 400px;
+    border: 1px solid white;
+    margin-top: 40px; /* Agregar margen superior */
+  }

@@ -14,6 +14,9 @@ import { MyBookingsComponent } from './components/customer-dashboard/my-bookings
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzTableModule } from 'ng-zorro-antd/table';
 
+//external
+import { NgxPayPalModule } from 'ngx-paypal';
+
 
 
 @NgModule({
@@ -36,6 +39,7 @@ import { NzTableModule } from 'ng-zorro-antd/table';
     NzDatePickerModule ,
     NzCardModule,
     NzTableModule,
+    NgxPayPalModule
    
    
     
