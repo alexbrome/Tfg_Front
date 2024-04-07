@@ -6,12 +6,14 @@ import { UpdateBikeComponent } from './components/update-bike/update-bike.compon
 import { GetBookingsComponent } from './components/get-bookings/get-bookings.component';
 import { SearchBikeComponent } from './components/search-bike/search-bike.component';
 
+
 const routes: Routes = [
   { path: "dashboard" , component: AdminDashboardComponent },
   { path:"bike",component:PostBikeComponent },
   { path:"bike/:id",component:UpdateBikeComponent },
   { path:"bookings",component:GetBookingsComponent },
-  { path:"search",component:SearchBikeComponent }
+  { path:"search",component:SearchBikeComponent },
+  
 ];
 
 @NgModule({

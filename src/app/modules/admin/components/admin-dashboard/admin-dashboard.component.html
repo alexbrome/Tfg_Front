@@ -18,8 +18,9 @@
                     <b>{{ bike.transmision }}</b>
                 </h5>
                 <hr>
+               
                 <div style="float: right;">
-                    <button style="margin-left: 10px;" nzSize="small" nz-button nzType="primary" routerLink="/admin/bike/{{ bike.id }}">Editar</button>  
+                   <button style="margin-left: 10px;" nzSize="small" nz-button nzType="primary" routerLink="/admin/bike/{{ bike.id }}">Editar</button>  
                 <button style="margin-left: 10px;" nzSize="small" nz-button nzType="primary" nzDanger (click)="deleteBike(bike.id)">Borrar</button>            
             </div>
          </div><br>

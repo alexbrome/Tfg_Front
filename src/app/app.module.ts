@@ -20,6 +20,8 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NgZorroImportsModule } from './NgZorroImportsModule';
+import { RouterModule } from '@angular/router';
+
 
 
 registerLocaleData(en);
@@ -43,7 +45,10 @@ registerLocaleData(en);
     NzInputModule,
     NzLayoutModule,
     ReactiveFormsModule,
-    NgZorroImportsModule
+    NgZorroImportsModule,
+    NzButtonModule,
+    RouterModule,
+   
     
   ],
   providers: [

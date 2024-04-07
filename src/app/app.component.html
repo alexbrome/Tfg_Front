@@ -1,17 +1,28 @@
+ <!--Noone logged-->
  <div *ngIf="!isAdminLoggedIn && !isCustomerloggedIn">
   <nz-header class="main-header" nz-row nzType="flex" class="custom-navbar" style="height:100px;background: linear-gradient(to right, #141616, #789a78);">
    
     <div class="navbar-title" style="margin-top:23px">     
-      <a routerLink="/login">
-       Inicio
+      <a routerLink="/">
+       <img src="assets/icons8-casa-64.png" alt="casa" style="coor:white;">
       </a>
-    </div>
+      
+  </div>
+  <div class="services">
+    <a nz-button nzType="link" routerLink="/dashboard" routerLinkActive="active">Catalogo de Bikes</a>
+    <a nz-button nzType="link" routerLink="/servicios" routerLinkActive="active">Servicios</a>
+    <a nz-button nzType="link" routerLink="/reservas" routerLinkActive="active">Punto de encuentro</a>
+    <a nz-button nzType="link" routerLink="/contacto" routerLinkActive="active">Contacto</a>
+     </div>
     <div class="nav-links">
+     
       <a nz-button nzType="link" routerLink="/register" routerLinkActive="active">Sign Up</a>
       <a nz-button nzType="link" routerLink="/login" routerLinkActive="active">Login</a>
     </div>
   </nz-header>
 </div>
+
+<!--Admin logged-->
 <div *ngIf="isAdminLoggedIn">
   <nz-header class="main-header" nz-row nzType="flex" class="custom-navbar" style="height:100px;background-color:#43977e;">
     <div class="navbar-title">     
@@ -27,6 +38,8 @@
     </div>
   </nz-header>
 </div>
+
+<!--Customer logged-->
 <div *ngIf="isCustomerloggedIn">
   <nz-header class="main-header" nz-row nzType="flex" class="custom-navbar" style="height:100px;background-color:#43977e;">
     <div class="navbar-title">     

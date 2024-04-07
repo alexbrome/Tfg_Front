@@ -1,15 +1,15 @@
-<div style="background-color: #F8F8F8; min-height: 91vh; display: flex;">
+<div style="background-color: #F8F8F8;display: flex;">
     <!-- Primera columna -->
     <div style="flex: 1;margin-left:130px;">
         <div style="padding-top: 10px;"></div>
 
-        <div style="margin-top: 10px;" class="child">
+        <div style="margin-top: 31px;" class="child">
             <div nz-row style="margin-left:50px;">
                 <div nz-col nzSpan="8">
                     <img [src]="processedImage" alt="bike" class="profile" style="height: 130px;width: 200px;border-radius: 10px;">
                 </div>
             </div>
-            <div nz-col nzSpan="16">
+            <div nz-col nzSpan="16" style="margin-left:45px;margin-top:15px">
                 <h2 style="cursor: pointer;color: #108ee9;">
                     {{bike.brand}} - {{ bike.name }} - {{ bike.type }}
                 </h2>
@@ -21,10 +21,10 @@
                 </h5>
                 <hr><br><br><br>
                 <button class="filterBtn"
-                style="margin-left: 100px; background-color: black; color: white;"
+                style="margin-left: 50px; background-color:black; color: white;"
                 nz-button
                 (click)="bookBike(validateForm.value)">
-            <b>Reservar Bike</b></button>
+            Reservar Bike</button>
             </div>
         </div>
     </div>
@@ -64,8 +64,7 @@
                         </div>
 
                         <div class="filter-select-dropdown filter-fields-width">
-                            <ngx-paypal [config]="payPalConfig"> </ngx-paypal>
-                           
+                            <ngx-paypal [config]="payPalConfig" > </ngx-paypal>
 
                         </div>
                     </div>

@@ -17,8 +17,8 @@
               </h5>
               <hr>
            <div style="float: right;">
-            <button style="margin-left: 10px; border-radius: 5px; background-color: rgb(40, 40, 157) ; border: none; 
-            color: white;padding: 11px;justify-content: center;text-align: center;"  nz-button nzType="default" routerLink="/customer/book/{{ bike.id }}">Reservar</button>
+            <div *ngIf="isCustomerloggedIn"><button style="margin-left: 10px; border-radius: 5px; background-color: rgb(40, 40, 157) ; border: none; 
+            color: white;padding: 11px;justify-content: center;text-align: center;"  nz-button nzType="default" routerLink="/customer/book/{{ bike.id }}">Reservar</button></div>
            </div>
        </div><br>
      </div>

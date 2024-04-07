@@ -18,6 +18,7 @@ import { UpdateBikeComponent } from './components/update-bike/update-bike.compon
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { GetBookingsComponent } from './components/get-bookings/get-bookings.component';
 import { SearchBikeComponent } from './components/search-bike/search-bike.component';
+import { MainPageComponent } from 'src/app/LandingPage/MainPage/MainPage.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { SearchBikeComponent } from './components/search-bike/search-bike.compon
     PostBikeComponent,
     UpdateBikeComponent,
     GetBookingsComponent,
-    SearchBikeComponent
+    SearchBikeComponent,
+    MainPageComponent
   ],
   imports: [
     CommonModule,

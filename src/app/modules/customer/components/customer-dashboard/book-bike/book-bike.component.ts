@@ -112,7 +112,7 @@ bookBike(data:any){
     denyButtonText: "Cancelar"
   }).then((result) => {
     if (result.isConfirmed) {
-       /*Aqui va la logica de payal*/ 
+     
 
       let bookBikeDto = {      
         toDate:data.toDate,
@@ -121,7 +121,7 @@ bookBike(data:any){
         bikeId:this.bikeId
       }
       this.service.bookBike(bookBikeDto).subscribe((resp) => {
-        //this.message.success("Bike Reservada", { nzDuration: 5000 });
+        
         this.router.navigateByUrl("/customer/dashboard");
       }, _error => {
         this.message.error("No se pudo reservar la bike", { nzDuration: 5000 });

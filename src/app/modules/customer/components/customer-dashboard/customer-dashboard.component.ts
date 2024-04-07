@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from '../../services/customer.service';
+import { StorageService } from 'src/app/auth/services/storage/storage.service';
 
 @Component({
   selector: 'app-customer-dashboard',
@@ -10,7 +11,7 @@ export class CustomerDashboardComponent implements OnInit {
 
 bikes:any=[];
 
-
+isCustomerloggedIn:boolean = StorageService.isCustomerLoggedIn();
   constructor(private customerService:CustomerService) { }
 
   ngOnInit() {
