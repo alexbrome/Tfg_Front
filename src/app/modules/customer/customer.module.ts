@@ -16,6 +16,7 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 
 //external
 import { NgxPayPalModule } from 'ngx-paypal';
+import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 
 
 
@@ -39,7 +40,8 @@ import { NgxPayPalModule } from 'ngx-paypal';
     NzDatePickerModule ,
     NzCardModule,
     NzTableModule,
-    NgxPayPalModule
+    NgxPayPalModule,
+    NzPaginationModule
    
    
     

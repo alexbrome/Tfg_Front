@@ -19,6 +19,8 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
 import { GetBookingsComponent } from './components/get-bookings/get-bookings.component';
 import { SearchBikeComponent } from './components/search-bike/search-bike.component';
 import { MainPageComponent } from 'src/app/LandingPage/MainPage/MainPage.component';
+import { NzCardModule } from 'ng-zorro-antd/card';
+
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { MainPageComponent } from 'src/app/LandingPage/MainPage/MainPage.compone
    NzSelectModule,
    NzButtonModule,
    ReactiveFormsModule,
-   NzModalModule
+   NzModalModule,
+   NzCardModule
+   
 
   
     
