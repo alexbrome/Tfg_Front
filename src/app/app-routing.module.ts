@@ -6,6 +6,7 @@ import { ContactoComponent } from './LandingPage/Contacto/Contacto.component';
 import { ServiciosComponent } from './LandingPage/ServiciosPage/Servicios.component';
 import { CustomerDashboardComponent } from './modules/customer/components/customer-dashboard/customer-dashboard.component';
 import { MainPageComponent } from './LandingPage/MainPage/MainPage.component';
+import { PuntoEncuentroComponent } from './LandingPage/PuntoEncuentro/PuntoEncuentro.component';
 
 const routes: Routes = [
 { path:"register",component:SingupComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
 { path:"contacto",component:ContactoComponent },
 { path:"servicios",component:ServiciosComponent },
 { path:"dashboard",component:CustomerDashboardComponent},
+{ path:"puntoEncuentro",component:PuntoEncuentroComponent},
 { path:"",component:MainPageComponent}
 //{ path:"*",redirectTo:"",pathMatch:"full" }
 ];

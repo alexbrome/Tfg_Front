@@ -21,6 +21,9 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NgZorroImportsModule } from './NgZorroImportsModule';
 import { RouterModule } from '@angular/router';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { ServiciosComponent } from './LandingPage/ServiciosPage/Servicios.component';
+import { PuntoEncuentroComponent } from './LandingPage/PuntoEncuentro/PuntoEncuentro.component';
 
 
 
@@ -31,6 +34,8 @@ registerLocaleData(en);
     AppComponent,
     LoginComponent,
     SingupComponent,
+    ServiciosComponent,
+    PuntoEncuentroComponent
 
   ],
   imports: [
@@ -48,6 +53,7 @@ registerLocaleData(en);
     NgZorroImportsModule,
     NzButtonModule,
     RouterModule,
+    NzTableModule
    
     
   ],

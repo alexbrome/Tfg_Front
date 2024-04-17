@@ -1,29 +1,29 @@
- <!--Noone logged-->
- <div *ngIf="!isAdminLoggedIn && !isCustomerloggedIn">
-  <nz-header class="main-header" nz-row nzType="flex" class="custom-navbar" style="height:100px;background: linear-gradient(to right, #141616, #789a78);">
+ <!--NoOne logged-->
+ <div *ngIf="!isAdminLoggedIn && !isCustomerloggedIn" class="fixed">
+  <nz-header class="main-header" nz-row nzType="flex" class="custom-navbar" style="height:100px;background:white">
    
     <div class="navbar-title" style="margin-top:23px">     
       <a routerLink="/">
-       <img src="assets/icons8-casa-64.png" alt="casa" style="coor:white;">
+       <img src="assets/casa.png" alt="casa" style="coor:white;">
       </a>
       
   </div>
   <div class="services">
-    <a nz-button nzType="link" routerLink="/dashboard" routerLinkActive="active">Catalogo de Bikes</a>
-    <a nz-button nzType="link" routerLink="/servicios" routerLinkActive="active">Servicios</a>
-    <a nz-button nzType="link" routerLink="/reservas" routerLinkActive="active">Punto de encuentro</a>
-    <a nz-button nzType="link" routerLink="/contacto" routerLinkActive="active">Contacto</a>
+    <a nz-button nzType="link" routerLink="/dashboard" routerLinkActive="active" style="color:black"><b>Catalogo de Bikes</b> </a>
+    <a nz-button nzType="link" routerLink="/servicios" routerLinkActive="active" style="color:black"><b>Servicios</b> </a>
+    <a nz-button nzType="link" routerLink="/puntoEncuentro" routerLinkActive="active" style="color:black"><b>Punto de encuentro</b> </a>
+    <a nz-button nzType="link" routerLink="/contacto" routerLinkActive="active" style="color:black"><b>Contacto</b> </a>
      </div>
     <div class="nav-links">
      
-      <a nz-button nzType="link" routerLink="/register" routerLinkActive="active">Sign Up</a>
-      <a nz-button nzType="link" routerLink="/login" routerLinkActive="active">Login</a>
+      <a nz-button nzType="link" routerLink="/register" routerLinkActive="active" style="color:black"><b>Sign Up</b> </a>
+      <a nz-button nzType="link" routerLink="/login" routerLinkActive="active" style="color:black"><b>Login</b> </a>
     </div>
   </nz-header>
 </div>
 
 <!--Admin logged-->
-<div *ngIf="isAdminLoggedIn">
+<div *ngIf="isAdminLoggedIn" class="fixed">
   <nz-header class="main-header" nz-row nzType="flex" class="custom-navbar" style="height:100px;background-color:white;">
     <div class="navbar-title">     
       <a routerLink="/login"> <img src="assets/admin.png" alt="admin">
@@ -40,7 +40,7 @@
 </div>
 
 <!--Customer logged-->
-<div *ngIf="isCustomerloggedIn">
+<div *ngIf="isCustomerloggedIn" class="fixed">
   <nz-header class="main-header" nz-row nzType="flex" class="custom-navbar" style="height:100px;background-color:white;">
     <div class="navbar-title">     
       <a routerLink="/login"><img src="assets/customer.png" alt="admin"><b style="color:black;">Customer</b>
@@ -59,3 +59,17 @@
 
 
 <router-outlet></router-outlet>
+<footer class="footer">
+   
+  <div class="iconos">
+  <img src="../assets/icons8-facebook-nuevo-40.png" alt="fotfacebook" class="icon" style="margin-right:10px;">
+  <img src="../assets/icons8-instagram-40.png" alt="fotfacebook" class="icon">
+</div>
+
+
+<div class="enlaces">
+  <p>© 2018 Aracena Cycling Adventures. All Rights Reserved. Aracena Cycling Adventures® is a registered trademark.</p> 
+   <a href="">Politica de cookies</a>
+   <a href="">Aviso legal</a>
+</div>
+</footer>

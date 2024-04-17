@@ -13,7 +13,7 @@
      </thead>
      <tbody>
         <tr *ngFor="let booking of basicTable.data">
-            <td>{{ booking.id }}</td>
+            <td>{{ booking.id +105}}</td>
            <td>{{ booking.fromDate | date : 'MMM d, y' }}</td>
            <td>{{ booking.toDate | date : 'MMM d, y' }}</td>
            <td>{{ booking.days }}</td>

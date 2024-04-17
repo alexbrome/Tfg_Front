@@ -1,10 +1,10 @@
-<div style="background-color: #AFCCB2; min-height: 91vh;">
+<div style=" min-height: 91vh;">
   <h1 style="text-align: center;margin-top: 20px;margin-bottom: 40px;text-decoration: underline;"><b>Lista de bicicletas disponibles</b></h1>
   <div style="padding-top: 10px;" ></div>
  <div style="margin-top: 10px; display: grid; grid-template-columns: repeat(5, 1fr);margin-left:140px;">
      <div class="child" *ngFor="let bike of bikes"  >
       <nz-card nzHoverable style="width:240px;height:260px" [nzCover]="coverTemplate">
-        <nz-card-meta nzTitle="{{bike.brand}} - {{ bike.name }} - {{ bike.type }}" nzDescription="{{ bike.transmision }}">
+        <nz-card-meta nzTitle="{{bike.brand}} - {{ bike.name }} - {{ bike.type }}" nzDescription="{{ bike.precio }}€  {{bike.transmision}}">
        
         </nz-card-meta>
       </nz-card><br>
@@ -20,6 +20,7 @@
       </div>
      <br> 
      <nz-pagination [nzPageIndex]="3" [nzTotal]="500" nzShowSizeChanger [nzPageSize]="10" style="margin-left:460px;margin-bottom:100px;"></nz-pagination> 
+     
     </div>
      
      
