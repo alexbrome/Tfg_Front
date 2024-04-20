@@ -54,22 +54,39 @@
    }
 
 }
+p{
+ 
+    color:white;
+  }
+
+  .enlaces{
+   display: flex;
+  margin-top: 140px;
+}
+
+.iconos{
+    margin-top: 120px;
+    margin-left: 40px;
+}
 
 .footer{
-    margin-top:20px;
+display: grid;
+grid-template-columns: auto auto ;
+background-color: black;
+height:220px;
+}
+    /*margin-top:20px;
     width:100%;
     background-color:black;
     height:250px;
     flex-direction: column;
     justify-content: flex-end;
    align-items: center;
- 
+
 }
 
 p{
-    margin-left:250px;
-    display: inline;
-      text-align:center;
+ 
     color:white;
   }
 .iconos{
@@ -100,4 +117,4 @@ a{
     color: green;
     margin-left: 10px; 
 
-}
+}*/
