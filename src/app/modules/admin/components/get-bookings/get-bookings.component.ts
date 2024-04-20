@@ -19,14 +19,12 @@ constructor(private adminService:AdminService,private message:NzMessageService){
 getBookings(){
   this.isSpinning=true;
   this.adminService.getBikeBookings().subscribe((resp)=>{
-    console.log(resp);
     this.isSpinning=false;
     this.bookings=resp;
   })
 }
 
 changeBookingStatus(bookingId:number,status:string){
-  console.log("Entra en el metodo de la clase")
 this.isSpinning=true;
 this.adminService.changeBookingStatus(bookingId,status).subscribe((resp)=>{
   this.isSpinning=false;

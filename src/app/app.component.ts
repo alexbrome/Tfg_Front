@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { StorageService } from './auth/services/storage/storage.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
@@ -25,9 +26,23 @@ ngOnInit(){
 }
 
 
-logout(){
-  StorageService.logout();
-  this.router.navigateByUrl("/");
+logout() {
+  Swal.fire({
+    title: "Estas seguro de cerrar sesión? ",
+    showDenyButton: false,
+    showCancelButton: true,
+    confirmButtonText: "Si",
+    denyButtonText: "Cancelar"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Cerrar sesión y redirigir a la página de inicio
+      StorageService.logout();
+      this.router.navigateByUrl("/");
+    } else if (result.isDenied) {
+      Swal.fire("Acción cancelada", "", "info");
+    }
+  });
 }
+
 
 }

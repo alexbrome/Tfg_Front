@@ -74,4 +74,20 @@ createAthorizationHeader():HttpHeaders{
     'Bearer ' +  StorageService.getToken()
   );
 }
+
+getMensajesContacto():Observable<any>{
+  
+  return this.http.get(BASIC_URL + "/api/mensaje",{
+    headers:this.createAthorizationHeader()
+  })
+}
+
+postMensajeContacto(mensajeContacto:any):Observable<any>{
+  return this.http.post(BASIC_URL+ "/api/mensaje/save",mensajeContacto,{
+    headers:this.createAthorizationHeader()
+  });
+
+}
+
+
 }

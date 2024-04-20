@@ -4,7 +4,7 @@
    
     <div class="navbar-title" style="margin-top:23px">     
       <a routerLink="/">
-       <img src="assets/casa.png" alt="casa" style="coor:white;">
+       <img src="assets/casa.png" alt="casa" >
       </a>
       
   </div>
@@ -26,13 +26,13 @@
 <div *ngIf="isAdminLoggedIn" class="fixed">
   <nz-header class="main-header" nz-row nzType="flex" class="custom-navbar" style="height:100px;background-color:white;">
     <div class="navbar-title">     
-      <a routerLink="/login"> <img src="assets/admin.png" alt="admin">
+      <a routerLink="/"> <img src="assets/admin.png" alt="admin">
       </a><b>Admin</b> 
     </div>
     <div class="nav-links" >
       <a style="color:black" nz-button nzType="link" routerLink="/admin/dashboard" routerLinkActive="active"><b>Catálogo de Bikes</b> </a>
       <a style="color:black" nz-button nzType="link" routerLink="/admin/bookings" routerLinkActive="active"><b>Reservas</b></a>
-      <a  style="color:black" nz-button nzType="link" routerLink="/admin/search" routerLinkActive="active"><b>Buscar Bikes</b></a>
+      <a  style="color:black" nz-button nzType="link" routerLink="/admin/search" routerLinkActive="active"><b>Mensajes de Contacto</b></a>
       <a style="color:black" nz-button nzType="link" routerLink="/admin/bike" routerLinkActive="active"><b>Añadir Bikes</b></a>
       <a style="color:black" nz-button nzType="link"   (click)="logout()" routerLinkActive="active"><img src="assets/logout.png" alt="logout" style="height: inherit;"></a>
     </div>
@@ -43,14 +43,13 @@
 <div *ngIf="isCustomerloggedIn" class="fixed">
   <nz-header class="main-header" nz-row nzType="flex" class="custom-navbar" style="height:100px;background-color:white;">
     <div class="navbar-title">     
-      <a routerLink="/login"><img src="assets/customer.png" alt="admin"><b style="color:black;">Customer</b>
+      <a routerLink="/"><img src="assets/customer.png" alt="admin"><b style="color:black;">Customer</b>
         
       </a>
     </div>
     <div class="nav-links">
       <a nz-button nzType="link" routerLink="/customer/dashboard" routerLinkActive="active" style="color:black;"><b>Catálogo de Bikes</b></a>
       <a nz-button nzType="link" routerLink="/customer/bike/search" routerLinkActive="active" style="color:black;"><b>Unete a nuestro club</b></a>
-      <a nz-button nzType="link" routerLink="/customer/bike/search" routerLinkActive="active" style="color:black;"><b> Buscar bikes</b></a>
       <a nz-button nzType="link" routerLink="/customer/my_bookings" routerLinkActive="active" style="color:black;"><b>Mis Reservas</b> </a>
       <a nz-button nzType="link"  (click)="logout()" routerLinkActive="active"><img src="assets/logout.png" alt="logout" style="height: inherit;"></a>
     </div>

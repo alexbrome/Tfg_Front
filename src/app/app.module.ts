@@ -24,6 +24,8 @@ import { RouterModule } from '@angular/router';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { ServiciosComponent } from './LandingPage/ServiciosPage/Servicios.component';
 import { PuntoEncuentroComponent } from './LandingPage/PuntoEncuentro/PuntoEncuentro.component';
+import { ContactoComponent } from './LandingPage/Contacto/Contacto.component';
+
 
 
 
@@ -35,7 +37,8 @@ registerLocaleData(en);
     LoginComponent,
     SingupComponent,
     ServiciosComponent,
-    PuntoEncuentroComponent
+    PuntoEncuentroComponent,
+    ContactoComponent
 
   ],
   imports: [

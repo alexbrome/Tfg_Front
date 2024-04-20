@@ -15,6 +15,8 @@ import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
 export class BookBikeComponent {
 
 bikeId:number=this.activatedRoute.snapshot.params["id"];
+userId:any;
+userEmail:any=this.getEmailUser();
 bike:any;
 processedImage:any;
 validateForm!:FormGroup;
@@ -23,19 +25,43 @@ dateFormat:string="dd/MM/YYYY";
 public payPalConfig?:IPayPalConfig;
 
 
+
 constructor(private service:CustomerService,private activatedRoute:ActivatedRoute,
   private fb:FormBuilder,private message:NzMessageService,private router:Router){}
 
 ngOnInit(){
-  console.log(this.bike);
+  //obtener el id del user
+  const userData = JSON.parse(localStorage.getItem('user') || '{}');
+  this.userId = userData.id || null;
+
+  //paypal
   this.initConfig();
+  //formulario
   this.validateForm = this.fb.group({
     toDate:[null,Validators.required],
     fromDate:[null,Validators.required],
   })
 this.getBikeById();
+this.getEmailUser();
+console.log(this.userEmail)
+
 }
 
+//getemailUser
+getEmailUser(){
+this.service.getEmailByUserId(this.userId).subscribe((resp)=>{
+this.userEmail=resp;
+console.log(this.userEmail);
+})
+}
+/*getBikeById(){
+this.service.getBikeById(this.bikeId).subscribe((resp)=>{
+this.processedImage = 'data:image7jpeg;base64,' + resp.returnedImage;
+this.bike = resp;
+console.log(this.bike);
+  })
+}
+*/
 //Paypal
 private initConfig(): void {
   this.payPalConfig = {
@@ -113,12 +139,14 @@ bookBike(data:any){
   }).then((result) => {
     if (result.isConfirmed) {
      
-
+      
       let bookBikeDto = {      
         toDate:data.toDate,
         fromDate:data.fromDate,
         userId:StorageService.getUserId(),
-        bikeId:this.bikeId
+        bikeId:this.bikeId,
+      
+        
       }
       this.service.bookBike(bookBikeDto).subscribe((resp) => {
         
@@ -138,7 +166,7 @@ getBikeById(){
 this.service.getBikeById(this.bikeId).subscribe((resp)=>{
 this.processedImage = 'data:image7jpeg;base64,' + resp.returnedImage;
 this.bike = resp;
-console.log(this.bike);
+
   })
 }
 

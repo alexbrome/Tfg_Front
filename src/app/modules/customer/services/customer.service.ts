@@ -13,6 +13,14 @@ export class CustomerService {
 
 constructor(private http:HttpClient ) { }
 
+
+getEmailByUserId(idNumber:number):Observable<any>{
+  console.log(idNumber);
+  return this.http.get(BASIC_URL + "/api/customer/bike/bookings/email/" + idNumber,{
+    headers:this.createAthorizationHeader()
+  })
+}
+
 getAllBikes():Observable<any>{
   return this.http.get(BASIC_URL + "/api/customer/bikes",{
     headers:this.createAthorizationHeader()
@@ -56,5 +64,5 @@ getBookingsByUserId():Observable<any>{
 
 }
 
-//Get bikeBooking by id
+
 

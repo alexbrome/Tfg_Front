@@ -1,12 +1,12 @@
 
    <h1>Contacta con nosotros</h1>
    <hr>
-    <form class="form">
+   <form class="form" [formGroup]="validateForm" (ngSubmit)="onSubmit()">
       <h2>CONTÁCTANOS</h2>
-      <p type="Name:"><input placeholder="Escriba su nombre aqui.."></p>
-      <p type="Email:"><input placeholder="Email.."></p>
-      <p type="Message:"><input placeholder="Que te gustaia reguntarnos.."></p>
-      <button>Enviar mensaje</button>
+      <p type="Name:"><input placeholder="Escriba su nombre aqui.." formControlName="nombre" ></p>
+      <p type="Email:"><input placeholder="Email.." formControlName="email" ></p>
+      <p type="Message:"><input placeholder="Que te gustaia reguntarnos.." formControlName="mensaje" ></p>
+      <button >Enviar mensaje</button>
      
     </form>
           <div class="mapa">

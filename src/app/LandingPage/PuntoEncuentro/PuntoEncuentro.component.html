@@ -1,35 +1,73 @@
-<h1>Disfruta de la naturaleza en la sierra de Huelva</h1>
+<h1>Disfruta de la naturaleza en la Sierra de Huelva</h1>
 
   <div class="two-column-container">
     <div class="column column1">
-      <h2>Alquiler de Bicicletas en Aracena</h2>
+      <h2>Unete a nuestro club ciclista</h2> 
   <br>
   <hr>
-      Descubre la calidad de nuestras bicicletas Orbea. Tenemos bicicletas de carretera, 
-      montaña y bicicletas eléctricas (e-bikes). Si tiene una petición especial, 
-      una bici que no aparece en la web o si busca alquiler de bicicletas para un grupo grande,
-       envíenos un mensaje e intentaremos hacer realidad tus deseos.
+     Si te unes a nuestro club, estaras informado de todas nuestras salidas para entrenar,
+     Entraras en nuestro grupo de <b>Whatsapp</b> donde podras estar informado de horarios y rutas, asi como descuentos en nuestros servicios.
+
   <br><br>
-  <button routerLink="/login" routerLinkActive="active" class="boton-reservar"> Reservar</button>
+
     </div>
     <br><br>
+    
     <div class="column2">
-        <img src="../assets/aracena.jpg" alt="logobici" style="height:450px">
+     <div class="form-container">
+      
+      <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">       
+        <img src="../../../assets/wasap.png" alt="wasap" style="width: 64px;height: 64px;">
+       <br><br><br>
+        <nz-form-item>
+        
+        <nz-form-control nzErrorTip="por favor introduce tu username!">
+          <nz-input-group nzPrefixIcon="user">
+           
+            <input formControlName="userName" nz-input placeholder="Username" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Por favor introduce tu email!">
+          <nz-input-group nzPrefixIcon="lock">
+           
+            <input formControlName="email" nz-input type="email" placeholder="Email" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Introduce 9 numeros!">
+          <nz-input-group nzPrefixIcon="lock">
+            <input formControlName="phoneNumber" nz-input type="text" placeholder="Telefono" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <br>
+      <nz-form-item>
+        <nz-form-control>
+          <button nz-button nzType="primary" [disabled]="!validateForm.valid">Log in</button> 
+         
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </div>
     </div>
   </div>  
 <br>
+
+
 <div class="contenedor2">
   <div class="columna2">
-    <img src="../assets/grupo.jpg" alt="logobici" id="foto2">
+    <img src="../assets/club.jpg" alt="logobici" id="foto2">
   </div>
   <div class="columna21">
-    <h2>Rutas en bici y salidas con guía</h2>
+    <h2>Ventajas de ser miembro de nuestro club</h2>
     <br>
     <hr>
-     Explora la sierra de Aracena  y su entorno en bici, 
-      descubre la belleza de los Pueblos Blancos de Andalucía. 
-      Puedes seguir las rutas que ya tenemos preparadas o, si lo prefieres, 
-      te podemos guiar nosotros por las tranquilas carreteras y los carriles y senderos de la zona. ¡Tú eliges!
+    Cuando te inscribas en nuestro club recibiras noticias de eventos, carreras, rutas y noticias relacionadas 
+    con el ciclismo en la sierrade Aracena.Tambien disfrutaras de descuentos en el alquiler de nuestras bicicletas y mucho mas....
       <br><br>
       <button routerLink="/contacto" routerLinkActive="active" class="boton-reservar"> Mas informacion...</button>
 

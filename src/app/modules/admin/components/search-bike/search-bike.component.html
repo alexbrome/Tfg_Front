@@ -1,4 +1,51 @@
-<div class="parent" >
+
+
+<br><br><br>
+<div class="container">
+
+  <h1 style="text-align: center;">Mensajes De Contacto</h1>
+<br><br><br>
+  <nz-table #basicTable [nzData]="listaMensajes" style="margin-left: 220px;">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Mensaje</th>
+       <th>Mandar email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of listaMensajes">
+        <td>{{data.nombre}}</td>
+        <td>{{data.email}}</td>
+       <td>{{data.mensaje}}</td>
+        <td><button (click)="enviarCorreo(data.email)">Mandar email</button></td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Buscar bikes-->
+<!--<div class="parent" >
     <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="Cargando">
       <div class="dashboard-ilter">
         <div class="filter-grid" [formGroup]="searchBikeForm">
@@ -43,9 +90,9 @@
     </nz-spin>
 </div>
 <hr>
-
+-->
 <!-------------------Lista de busqueda-------------->
-<div style="background-color:#F8F8F8;">
+<!--<div style="background-color:#F8F8F8;">
  <div class="child" style="padding-bottom:30px;" *ngFor="let bike of bikes">
   <div nzRow>
     <div nz-col nzSpan="8">
@@ -62,3 +109,4 @@
   </div>
  </div>
 </div>
+-->

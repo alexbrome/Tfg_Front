@@ -10,8 +10,7 @@ import { PostBikeComponent } from './components/post-bike/post-bike.component';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzButtonModule } from 'ng-zorro-antd/button';
-import { NzInputModule } from 'ng-zorro-antd/input';
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
+
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NgZorroImportsModule } from 'src/app/NgZorroImportsModule';
 import { UpdateBikeComponent } from './components/update-bike/update-bike.component';
